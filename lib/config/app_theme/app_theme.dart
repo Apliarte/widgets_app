@@ -19,6 +19,20 @@ const colorList = <Color>[
 ];
 
 class AppTheme {
+  // cambia el color de fondo por uno aleatorio
+
   final int selectedColor;
-  AppTheme({this.selectedColor = 0});
+
+  AppTheme({this.selectedColor = 0})
+      : assert(selectedColor >= 0, 'Selecciona un color mas alto que 0'),
+        assert(selectedColor < colorList.length,
+            'Selecciona un color mas bajo que${colorList.length}');
+
+  ThemeData getTheme() => ThemeData(
+        useMaterial3: true,
+        colorSchemeSeed: colorList[selectedColor],
+        appBarTheme: const AppBarTheme(
+          centerTitle: true,
+        ),
+      );
 }
