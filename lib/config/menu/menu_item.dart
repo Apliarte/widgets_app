@@ -4,7 +4,7 @@ class MenuItem {
   final String title;
   final String subTitle;
   final String link;
-  final  icon;
+  final icon;
 
   const MenuItem(
       {required this.title,
@@ -14,22 +14,16 @@ class MenuItem {
 }
 
 const appMenuItems = <MenuItem>[
-
   MenuItem(
     title: 'Botones',
-    subTitle: 'Varios Botones en Flutter', 
-    link: '/buttons', 
-    icon: Icons.smart_button_outlined, 
-    
-    ),
+    subTitle: 'Varios Botones en Flutter',
+    link: '/buttons',
+    icon: Icons.smart_button_outlined,
+  ),
   MenuItem(
     title: 'Tarjetas',
-    subTitle: 'Un contenedor estilizado', 
-    link: '/card', 
-    icon: Icons.credit_card_outlined, 
-    
-    
-    
-    )
- 
+    subTitle: 'Un contenedor estilizado',
+    link: '/card',
+    icon: Icons.credit_card_outlined,
+  )
 ];
