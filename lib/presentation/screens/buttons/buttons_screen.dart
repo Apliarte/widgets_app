@@ -59,7 +59,7 @@ class _ButtonsView extends StatelessWidget {
                 onPressed: () {},
                 icon: const Icon(Icons.house_outlined),
                 label: const Text('OutlinedButton.icon')),
-            TextButton(onPressed: () {}, child: Text('TextButton')),
+            TextButton(onPressed: () {}, child: const Text('TextButton')),
             TextButton.icon(
                 onPressed: () {},
                 icon: const Icon(Icons.house_outlined),
@@ -77,8 +77,41 @@ class _ButtonsView extends StatelessWidget {
                   iconColor: MaterialStatePropertyAll(Colors.white),
                   shadowColor: MaterialStatePropertyAll(Colors.pink),
                   elevation: MaterialStatePropertyAll(10),
-                ))
+                )),
+                const CustomButton()
           ],
+        ),
+      ),
+    );
+  }
+}
+class CustomButton extends StatelessWidget {
+  const CustomButton({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return  ClipRRect(
+      key: key,
+      clipBehavior: Clip.antiAlias,
+
+      borderRadius: const BorderRadius.only(
+        topLeft: Radius.circular(40),
+        topRight: Radius.circular(2),
+        bottomLeft: Radius.circular(50),
+        bottomRight: Radius.circular(50),
+        
+      ),
+      child: Material(
+        color: Colors.pink,
+        child: InkWell(
+          onTap: () {},
+          focusColor: Colors.amber,
+          child: const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 60, vertical: 30),
+            child: Text('ApliArte',style: TextStyle(color: Colors.white),),
+        
+            
+          ),
         ),
       ),
     );
