@@ -29,6 +29,7 @@ class AppTheme {
             'Selecciona un color mas bajo que${colorList.length}');
 
   ThemeData getTheme() => ThemeData(
+    brightness: Brightness.light,
         useMaterial3: true,
         colorSchemeSeed: colorList[selectedColor],
         appBarTheme: const AppBarTheme(
