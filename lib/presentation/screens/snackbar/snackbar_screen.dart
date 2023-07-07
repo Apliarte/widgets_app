@@ -20,30 +20,27 @@ class SnackBarScreen extends StatelessWidget {
     ScaffoldMessenger.of(context).showSnackBar(snakback);
   }
 
-
-  void openDialog(BuildContext context) { showDialog(
-
-
-    context: context,
-    barrierDismissible: false,
-    builder: (context) => AlertDialog(
-      title: const Text('¿Estas seguro'),
-      content: const Text('Lorem ipsum dolor sit amet, consectetur adipiscing elit  '),
-      actions: [
-        TextButton(
-          onPressed: ()=> context.pop(),
-          child: const Text('Cancelar'),
-        ),
-        FilledButton(
-          onPressed: ()=> context.pop(),
-          child: const Text('Aceptar'),
-        ),
-      ],
-    ),
-  );}
-
-
-
+  void openDialog(BuildContext context) {
+    showDialog(
+      context: context,
+      barrierDismissible: false,
+      builder: (context) => AlertDialog(
+        title: const Text('¿Estas seguro'),
+        content: const Text(
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit  '),
+        actions: [
+          TextButton(
+            onPressed: () => context.pop(),
+            child: const Text('Cancelar'),
+          ),
+          FilledButton(
+            onPressed: () => context.pop(),
+            child: const Text('Aceptar'),
+          ),
+        ],
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
