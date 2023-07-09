@@ -7,14 +7,13 @@ class SlideInfo {
   final String caption;
   final String imageUrl;
 
-  SlideInfo(
-    this.title, 
-    this.caption, 
-    this.imageUrl);
+  SlideInfo(this.title, this.caption, this.imageUrl);
+
+
 }
 
 final slides = <SlideInfo>[
-  SlideInfo('Primera vista 1', 'Exercitation voluptate cillum eu aute dolor irure aliquip.', 'assets/images/1.png'),
+  SlideInfo('Primera pantalla', 'mira el tita como esta mirando en el movil a ver que va a comer ', 'assets/images/1.png'),
   SlideInfo('Segunda vista 2', 'Ullamco ullamco duis labore quis occaecat culpa laborum id incididunt.', 'assets/images/2.png'),
   SlideInfo('Tercera vista 3', 'Ea officia exercitation voluptate nostrud amet esse ut exercitation deserunt est enim est.', 'assets/images/3.png'),
 ];
@@ -75,8 +74,9 @@ class _AppTutorialScreenState extends State<AppTutorialScreen> {
                       ))
                   .toList()),
           Positioned(
-              right: 20,
-              top: 50,
+            right: 30,
+            top: 30,
+              
               child: TextButton(
                 child: const Text('Salir'),
                 onPressed: () => context.pop(),
@@ -85,9 +85,9 @@ class _AppTutorialScreenState extends State<AppTutorialScreen> {
               ? Positioned(
                   bottom: 30,
                   right: 30,
-                  child: ElasticInUp(
+                  child: SlideInUp(
                     animate: true,
-                  
+                  duration: Duration(seconds: 3),
                     from: 50,
                     delay: const Duration(milliseconds: 500),
                     child: FilledButton(
