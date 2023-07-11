@@ -4,6 +4,7 @@ class MenuItem {
   final String title;
   final String subTitle;
   final String link;
+  // ignore: prefer_typing_uninitialized_variables
   final icon;
 
   const MenuItem(
@@ -14,6 +15,12 @@ class MenuItem {
 }
 
 const appMenuItems = <MenuItem>[
+  MenuItem(
+    title: 'Riverpod Counter',
+    subTitle: 'Introduccion a Riverpod',
+    link: '/counter-river',
+    icon: Icons.add,
+  ),
   MenuItem(
     title: 'Botones',
     subTitle: 'Varios Botones en Flutter',
@@ -35,7 +42,7 @@ const appMenuItems = <MenuItem>[
   MenuItem(
     title: 'SnackBar y Dialogs ',
     subTitle: 'Indicadores en Pantalla',
-    link: '/snackbars',
+    link: '/snackbar',
     icon: Icons.info_outline,
   ),
   MenuItem(
@@ -65,4 +72,13 @@ const appMenuItems = <MenuItem>[
     link: '/infinite',
     icon: Icons.list_alt_rounded,
   ),
+  
+  MenuItem(
+    title: 'Cambiar tema',
+    subTitle: 'cambiar tema de la aplicación',
+    link: '/theme-change',
+    icon: Icons.color_lens,
+  ),
+
+
 ];

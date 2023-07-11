@@ -83,12 +83,13 @@ class _AppTutorialScreenState extends State<AppTutorialScreen> {
               )),
           endReached
               ? Positioned(
-                  bottom: 30,
-                  right: 30,
-                  child: SlideInUp(
+                  bottom: 50,
+                  right: 60,
+                  child: ZoomIn(
+                    
                     animate: true,
-                  duration: Duration(seconds: 3),
-                    from: 50,
+                  duration: const Duration(seconds: 1),
+                  
                     delay: const Duration(milliseconds: 500),
                     child: FilledButton(
                       onPressed: () => context.pop(),

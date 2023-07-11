@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:widgets_app/config/app_theme/app_theme.dart';
 
 class UiControlScreen extends StatelessWidget {
   static const name = 'Ui Control ';
@@ -48,7 +47,7 @@ class _UiControlsViewState extends State<_UiControlsView> {
         ExpansionTile(
           backgroundColor:
               Theme.of(context).colorScheme.secondary.withOpacity(0.4),
-          title: Text('Maneras de pasear'),
+          title: const Text('Maneras de pasear'),
           subtitle: Text('¿cual eliges tú?¿ $selectedTransportation?'),
           children: [
             RadioListTile(
@@ -60,7 +59,7 @@ class _UiControlsViewState extends State<_UiControlsView> {
                 selectedTransportation = Transportation.car;
               }),
 
-              // continua con todos los elementos de la lista trasnportation
+              // continua con todos los elementos de la lista transportation
             ),
             RadioListTile(
               title: const Text('Caballo'),
@@ -71,7 +70,7 @@ class _UiControlsViewState extends State<_UiControlsView> {
                 selectedTransportation = Transportation.horse;
               }),
 
-              // continua con todos los elementos de la lista trasnportation
+              // continua con todos los elementos de la lista transportation
             ),
             RadioListTile(
               title: const Text('Bike'),
@@ -82,7 +81,7 @@ class _UiControlsViewState extends State<_UiControlsView> {
                 selectedTransportation = Transportation.bike;
               }),
 
-              // continua con todos los elementos de la lista trasnportation
+              // continua con todos los elementos de la lista transportation
             ),
             RadioListTile(
               title: const Text('Barco'),
@@ -93,7 +92,7 @@ class _UiControlsViewState extends State<_UiControlsView> {
                 selectedTransportation = Transportation.boat;
               }),
 
-              // continua con todos los elementos de la lista trasnportation
+              // continua con todos los elementos de la lista transportation
             ),
             RadioListTile(
               title: const Text('Pasear'),
@@ -104,7 +103,7 @@ class _UiControlsViewState extends State<_UiControlsView> {
                 selectedTransportation = Transportation.walking;
               }),
 
-              // continua con todos los elementos de la lista trasnportation
+              // continua con todos los elementos de la lista transportation
             ),
           ],
         ),

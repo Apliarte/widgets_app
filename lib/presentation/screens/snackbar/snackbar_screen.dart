@@ -8,7 +8,7 @@ class SnackBarScreen extends StatelessWidget {
   void showCustomSnackbar(BuildContext context) {
     ScaffoldMessenger.of(context).clearSnackBars();
 
-    final snakback = SnackBar(
+    final snapback = SnackBar(
       content: const Text('hola mundo'),
       action: SnackBarAction(
         label: 'Cerrar',
@@ -17,7 +17,7 @@ class SnackBarScreen extends StatelessWidget {
       duration: const Duration(seconds: 2),
     );
 
-    ScaffoldMessenger.of(context).showSnackBar(snakback);
+    ScaffoldMessenger.of(context).showSnackBar(snapback);
   }
 
   void openDialog(BuildContext context) {

@@ -1,4 +1,5 @@
 import 'package:go_router/go_router.dart';
+import 'package:widgets_app/presentation/screens/counter/counter_screen.dart';
 
 import '../../presentation/screens/screens.dart';
 
@@ -27,7 +28,7 @@ final appRouter = GoRouter(
       builder: (context, state) => const ProgressScreen(),
     ),
     GoRoute(
-      path: '/snackbars',
+      path: '/snackbar',
       name: SnackBarScreen.name,
       builder: (context, state) => const SnackBarScreen(),
     ),
@@ -51,6 +52,18 @@ final appRouter = GoRouter(
       name: InfiniteScrollScreen.name,
       // ignore: prefer_const_constructors
       builder: (context, state) =>  const InfiniteScrollScreen(),
+    ),
+    GoRoute(
+      path: '/counter-river',
+      name: CounterScreen.name,
+      // ignore: prefer_const_constructors
+      builder: (context, state) =>   CounterScreen(),
+    ),
+    GoRoute(
+      path: '/theme-change',
+      name: ThemeChangerScreen.name,
+      // ignore: prefer_const_constructors
+      builder: (context, state) =>ThemeChangerScreen(),
     ),
   ],
 );
