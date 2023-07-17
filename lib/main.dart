@@ -4,11 +4,13 @@ import 'package:widgets_app/config/app_theme/app_theme.dart';
 import 'package:widgets_app/config/router/app_router.dart';
 import 'package:widgets_app/presentation/providers/theme_provider.dart';
 
-
 void main() {
   runApp(
-    const ProviderScope(child: 
-    MainApp()));
+    const ProviderScope(
+      child: 
+      MainApp()
+    )
+  );
 }
 
 class MainApp extends ConsumerWidget {
@@ -22,7 +24,6 @@ class MainApp extends ConsumerWidget {
     final appTheme = ref.watch(themeNotifierProvider);
 
     return MaterialApp.router(
-      
       title: 'Whidgets App',
       routerConfig: appRouter,
       debugShowCheckedModeBanner: false,
